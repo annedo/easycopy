@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Easy Copy</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="app">
+            <copy-section
+            language-id="Vietnamese"
+            copy-text="Bảo hiểm sức khỏe sắp hết hạn rồi nhắn tin cho Thủy biết Anh Chị muốn làm gì: Renew? Cancel?&#10;&#10;-Thuy Bell 727-280-4563"
+            >
+            </copy-section>
+            <copy-section
+            language-id="English"
+            copy-text="Your 2020 health insurance is about to expire. Text Thuy what you want to do: Renew? Cancel?&#10;&#10;-Thuy Bell 727-280-4563"
+            >
+            </copy-section>
+            
+            <copy-button
+            v-bind:textarea-id-list="['Vietnamese', 'English']"
+            display-text="Copy Both"
+            ></copy-button>
+        </div>
+        <script src="vue.js"></script>
+        <script src="components.js"></script>
+    </body>
+</html>
