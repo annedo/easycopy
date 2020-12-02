@@ -60,8 +60,8 @@ Vue.component('copy-section', {
 var app = new Vue({
     el: '#app',
     data: {
-        textVN: "Bảo hiểm sức khỏe sắp hết hạn rồi nhắn tin cho Thủy biết Anh Chị muốn làm gì: Renew? Cancel? \n\n-Thuy Bell 727-280-4563",
-        textEN: "Your 2020 health insurance is about to expire. Text Thuy what you want to do: Renew? Cancel? \n\n-Thuy Bell 727-280-4563"
+        name: 'NAME',
+        gender: 'chị'
     }
     /*methods: {
         copyText: function(copyIdList, event) {

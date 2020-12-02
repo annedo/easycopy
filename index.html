@@ -3,17 +3,51 @@
         <title>Easy Copy</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="app">
+            <h1>Client Info</h1>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input
+                    id="name"
+                    type="text"
+                    v-model.trim="name">
+                </div>
+                <div>
+                    <legend>Gender:</legend>
+                    <div>
+                        <input
+                        id="female"
+                        type="radio"
+                        v-model="gender"
+                        name="gender"
+                        value="chị">
+                        <label for="female">Female</label>
+                    </div>
+                    <div>
+                        <input
+                        id="male"
+                        type="radio"
+                        v-model="gender"
+                        name="gender"
+                        value="anh"
+                        ><label for="male">Male</label>
+                    </div>
+                </div>
+            </form>
             <copy-section
+            class= "inline50"
             language-id="Vietnamese"
-            copy-text="Bảo hiểm sức khỏe sắp hết hạn rồi nhắn tin cho Thủy biết Anh Chị muốn làm gì: Renew? Cancel?&#10;&#10;-Thuy Bell 727-280-4563"
+            :copy-text="`12/15/2020 bảo hiểm sức khỏe cua ${gender} ${name} sẽ hết hạn. Nhắn tin cho Thủy biết ${gender} muốn làm gì: Renew? Cancel?\n\n-Thuy Bell 727-280-4563`"
             >
             </copy-section>
             <copy-section
+            class= "inline50"
             language-id="English"
-            copy-text="Your 2020 health insurance is about to expire. Text Thuy what you want to do: Renew? Cancel?&#10;&#10;-Thuy Bell 727-280-4563"
+            :copy-text="`${name}, 12/15/2020 is the deadline to renew your expiring health insurance. Text Thuy what you want to do: Renew? Cancel?\n\n-Thuy Bell 727-280-4563`"
             >
             </copy-section>
             
